@@ -1,7 +1,128 @@
+/* Estilos uteis para o body */
+body {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
 .righteous {
     font-family: 'Righteous', cursive;
     
 }
 .roboto {
     font-family: 'Roboto', sans-serif;
+}
+.bold {
+    font-weight: bold;
+}
+
+/* Estilos para Header */
+header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background-color: #CF2B2B;
+}
+.header-texto {
+    margin: 8px 0px 18px 21px;
+}
+.header-texto > h3 {
+    color: #FFFFFF;
+    font-size: 44px;
+    line-height: 55px;
+    letter-spacing: -0.012em;
+}
+.header-texto > p {
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+/* Estilos para o Main */
+main {
+    background-color: #E5E5E5;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+/* Estilo de algumas margins que uso em relação a outra coisa */
+.margin_relacao-header {
+    margin-top: calc(92px + 32px);
+}
+.margin_relacao-section {
+    margin-top: 28px;
+}
+.margin_relacao-footer {
+    margin-bottom: calc(92px + 30px);
+}
+/* Estilo do Article */
+.main-escolher__comida {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.main-escolher__comida > p {
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 00.018em;
+    color: #333333;
+}
+/* Estilo da Section */
+.main-comidas {
+    overflow-x: scroll;
+    display: flex;
+    margin-top: 17px;
+}
+/* Estilo da  Div unica que contem a comida */
+.main-conteiner_comida {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 14px 16px 14px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    background-color: #FFFFFF;
+    margin-right: 18px;
+}
+.main-conteiner_comida > img {
+    margin-bottom: 8px;
+}
+.main-conteiner_comida_texto > p {
+    color: #A6A6A6;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 300;
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+.main-conteiner_comida_texto > h3 {
+    font-size: 16px;
+    line-height: 19px;
+    color: #333333;
+}
+
+/* Estilos para o Footer */
+footer {
+    position: fixed;
+    bottom: 0px;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+}
+.footer-botao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 61px;
+    margin: 15px 25px 25px;
+    background-color: #CBCBCB;
+    border-radius: 50px;
+}
+.footer-botao > p {
+    width: 200px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 20px;
+    letter-spacing: 0.018em;
 }

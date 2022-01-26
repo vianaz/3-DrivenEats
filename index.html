@@ -31,7 +31,7 @@
             <!-- Section que tem o conteiner todo da comida -->
             <section class="main-comidas">
                 <!-- O quadrado da comida individual -->
-                <div class="main-conteiner_comida">
+                <div class="main-conteiner_comida" onclick="select_prato()" id="teste">
                     <img src="img/frango_yin_yang 1.svg" alt="foto do prato">
                     <div class="main-conteiner_comida_texto">
                         <h3 class="roboto bold">Frango Yin Yang</h3>
@@ -68,13 +68,14 @@
                 </div>
             </section>
         </article>
+
         <!-- Article contendo Texto e Comida (Agora, sua bebida) -->
         <article class="main-escolher__comida margin_relacao-section">
             <p class="righteous">Primerio, seu prato</p>
             <!-- Section que tem o conteiner todo da comida -->
             <section class="main-comidas">
                 <!-- O quadrado da comida individual -->
-                <div class="main-conteiner_comida">
+                <div class="main-conteiner_comida" onclick="selectPrato(this)">
                     <img src="img/frango_yin_yang 1.svg" alt="foto do prato">
                     <div class="main-conteiner_comida_texto">
                         <h3 class="roboto bold">Frango Yin Yang</h3>
@@ -111,6 +112,7 @@
                 </div>
             </section>
         </article>
+
         <!-- Article contendo Texto e Comida (Por fim, sua sobremesa) -->
         <article class="main-escolher__comida margin_relacao-section margin_relacao-footer">
             <p class="righteous">Primerio, seu prato</p>
@@ -155,11 +157,7 @@
             </section>
         </article>
         
-
-
     </main>
-
-
 
     <!-- Conteudo Barra Inferior -->
     <footer>
@@ -168,5 +166,7 @@
             <p class="roboto">Selecione os 3 itens para fechar o pedido</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
+
 </html>

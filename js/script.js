@@ -1,8 +1,6 @@
 // Array vazia para guardar pedidos
 let pedido = [];
-
 let textoMensagem;
-
 
 // Função Para Escolher o PRATO
 function selectPrato (prato) {
@@ -17,7 +15,7 @@ function selectPrato (prato) {
     liberarbotao()
 }
 
-// Função para escolher a Bebida
+// Função para escolher a BEBIDA
 function selectBebida (bebida) {
     if (typeof pedido[1] === "undefined") {
         pedido[1] = bebida;
@@ -30,7 +28,7 @@ function selectBebida (bebida) {
     liberarbotao()
 }
 
-// Função para escolher a Sobremesa
+// Função para escolher a SOBREMESA
 function selectSobremesa (sobremesa) {
     if (typeof pedido[2] === "undefined") {
         pedido[2] = sobremesa;
@@ -43,18 +41,42 @@ function selectSobremesa (sobremesa) {
     liberarbotao()
 }
 
-// Função para liberar o botão
+// Função para LIBERAR BOTAO PEDIR COMIDA
 function liberarbotao() {
     if (typeof pedido[0] != "undefined" && typeof pedido[1] != "undefined" && typeof pedido[2] != "undefined") {
         pegarDados();
         let botaoliberado = document.querySelector('.footer-botao');
         botaoliberado.style.backgroundColor = '#32B72F';
         botaoliberado.innerHTML = '<p class="roboto">Fechar Pedido</p>';
-        
     }
 } 
+//Mostra a TELA CONFIRMAÇÃO
+function telaConfirmacao() {
+    // Transorma tela confirmação em flex
+    document.querySelector('.body-confirmar_pedido').style.display = 'flex';
 
-// Pega os dados do pedido
+    // Adiciona o nome e valor prato
+    document.querySelectorAll('.valor')[0].children[0].innerHTML = `${nomePrato}`;
+    document.querySelectorAll('.valor')[0].children[1].innerHTML = `R$ ${valorPrato}`;
+
+    // Adiciona o nome e valor bebida
+    document.querySelectorAll('.valor')[1].children[0].innerHTML = `${nomeBebida}`;
+    document.querySelectorAll('.valor')[1].children[1].innerHTML = `R$ ${valorBebida}`;
+
+    // Adiciona o nome e valor sobremesa
+    document.querySelectorAll('.valor')[2].children[0].innerHTML = `${nomeSobremesa}`;
+    document.querySelectorAll('.valor')[2].children[1].innerHTML = `R$ ${valorSobremesa}`;
+
+    // Adiciona o nome e valor TOTAL
+    document.querySelectorAll('.valor')[3].children[1].innerHTML = `R$ ${valorTotal}`;
+}
+
+// Apaga tela confirmação 
+function apagarTelaConfirmacao(params) {
+    document.querySelector('.body-confirmar_pedido').style.display = 'none';
+}
+
+// PEGA DADOS DO PEDIDO
 function pegarDados() {
     // Nomes
     nomePrato = pedido[0].getElementsByTagName("h3")[0].textContent;
@@ -65,7 +87,7 @@ function pegarDados() {
     valorPrato = pedido[0].getElementsByTagName("span")[0].textContent.replace(',', '.');
     valorBebida = pedido[1].getElementsByTagName("span")[0].textContent.replace(',', '.');
     valorSobremesa = pedido[2].getElementsByTagName("span")[0].textContent.replace(',', '.');
-    valorTotal = parseFloat(valorBebida) + parseFloat(valorPrato) + parseFloat(valorSobremesa);
+    valorTotal = (parseFloat(valorBebida) + parseFloat(valorPrato) + parseFloat(valorSobremesa)).toFixed(2);
 }
 
 // Link pro Hiroshima e Nagazapi

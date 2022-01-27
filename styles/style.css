@@ -159,18 +159,24 @@ main {
 /* Estilo da  Div unica que contem a comida */
 .main-conteiner_comida {
     display: flex;
+    position: relative;
     flex-direction: column;
     align-items: center;
     padding: 18px 14px 16px 14px;
     border-radius: 9px;
     background-color: #FFFFFF;
     margin-right: 18px;
+    width: 172px;
+    height: 238px;
 }
 .main-conteiner_comida:hover {
     cursor: pointer;
 }
 .main-conteiner_comida > img {
     margin-bottom: 8px;
+    width: 144px;
+    height: 87px;
+    border-radius: 8px;
 }
 .main-conteiner_comida_texto > p {
     color: #A6A6A6;
@@ -179,6 +185,7 @@ main {
     font-weight: 300;
     margin-bottom: 7px;
     margin-top: 7px;
+    height: 57px;
 }
 .main-conteiner_comida_texto > h3 {
     font-size: 16px;

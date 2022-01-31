@@ -157,6 +157,14 @@ main {
     margin-top: 17px;
 }
 /* Estilo da  Div unica que contem a comida */
+
+.icone-check {
+    position: absolute;
+    color: #32B72F;
+    font-size: 22px;
+    right: 10px;
+    bottom: 15px;
+}
 .main-conteiner_comida {
     display: flex;
     position: relative;
@@ -224,4 +232,7 @@ footer {
 /* Estilos para o JS */
 .mudar-borda {
     box-shadow: inset 0px 0px 0px 5px #32B72F;
+}
+.ocultar {
+    display: none;
 }

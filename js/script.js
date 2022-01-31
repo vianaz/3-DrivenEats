@@ -7,9 +7,12 @@ function selectPrato (prato) {
     if (typeof pedido[0] === "undefined") {
         pedido[0] = prato;
         prato.classList.add("mudar-borda");
+        pedido[0].getElementsByTagName('ion-icon')[0].classList.remove('ocultar');
     } else {
         pedido[0].classList.remove("mudar-borda");
+        pedido[0].getElementsByTagName('ion-icon')[0].classList.add('ocultar');
         pedido[0] = prato;
+        pedido[0].getElementsByTagName('ion-icon')[0].classList.remove('ocultar');
         prato.classList.add("mudar-borda");
     }
     liberarbotao()
@@ -20,9 +23,12 @@ function selectBebida (bebida) {
     if (typeof pedido[1] === "undefined") {
         pedido[1] = bebida;
         bebida.classList.add("mudar-borda");
+        pedido[1].getElementsByTagName('ion-icon')[0].classList.remove('ocultar');
     } else {
         pedido[1].classList.remove("mudar-borda");
+        pedido[1].getElementsByTagName('ion-icon')[0].classList.add('ocultar');
         pedido[1] = bebida;
+        pedido[1].getElementsByTagName('ion-icon')[0].classList.remove('ocultar');
         bebida.classList.add("mudar-borda");
     }
     liberarbotao()
@@ -33,9 +39,12 @@ function selectSobremesa (sobremesa) {
     if (typeof pedido[2] === "undefined") {
         pedido[2] = sobremesa;
         sobremesa.classList.add("mudar-borda");
+        pedido[2].getElementsByTagName('ion-icon')[0].classList.remove('ocultar');
     } else {
         pedido[2].classList.remove("mudar-borda");
+        pedido[2].getElementsByTagName('ion-icon')[0].classList.add('ocultar');
         pedido[2] = sobremesa;
+        pedido[2].getElementsByTagName('ion-icon')[0].classList.remove('ocultar');
         sobremesa.classList.add("mudar-borda");
     }
     liberarbotao()
@@ -52,6 +61,7 @@ function liberarbotao() {
 } 
 //Mostra a TELA CONFIRMAÇÃO
 function telaConfirmacao() {
+    if (typeof pedido[0] != "undefined" && typeof pedido[1] != "undefined" && typeof pedido[2] != "undefined") {
     // Transorma tela confirmação em flex
     document.querySelector('.body-confirmar_pedido').style.display = 'flex';
 
@@ -69,6 +79,7 @@ function telaConfirmacao() {
 
     // Adiciona o nome e valor TOTAL
     document.querySelectorAll('.valor')[3].children[1].innerHTML = `R$ ${valorTotal}`;
+    }
 }
 
 // Apaga tela confirmação 
